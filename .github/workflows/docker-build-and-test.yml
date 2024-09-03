@@ -1,4 +1,4 @@
-name: CI - Test and Build Docker Image
+name: CI - Test and Build Multi-Arch Docker Image
 
 on:
   push:
@@ -27,12 +27,9 @@ jobs:
           python -m venv .venv
           . .venv/bin/activate
           pip install --upgrade pip
-         # pip install -r requirements.txt
+          pip install -r requirements.txt
 
       - name: Run unit tests
         run: |
-          chmod +x ../../run-unit-tests.sh
-          ../../run-unit-tests.sh
-
-      - name: Post build notification
-        run: echo "Docker image built and pushed successfully."
+          chmod +x ./run-unit-tests.sh
+          ./run-unit-tests.sh
