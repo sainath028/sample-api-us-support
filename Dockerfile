@@ -11,7 +11,7 @@ COPY . /application
 RUN python -m venv .venv
 
 # Activate the virtual environment and install dependencies
-RUN . .venv/bin/activate && pip install --upgrade pip && pip install -r requirements.txt
+#RUN . .venv/bin/activate && pip install --upgrade pip && pip install -r requirements.txt
 
 # Make the script executable
 RUN chmod +x /application/start-local.sh
