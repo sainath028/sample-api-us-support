@@ -34,7 +34,7 @@ jobs:
           chmod +x ./run-unit-tests.sh
           ./run-unit-tests.sh
 
- build-and-publish:
+  build-and-publish:
     name: Build and Publish Multi-Arch Docker Image
     runs-on: ubuntu-latest
     needs: run-tests
